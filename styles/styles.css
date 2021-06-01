@@ -1,79 +1,84 @@
+:root {
+	--green: #20f5c9;
+	--red: #d10073;
+	--purple1: #7700d1;
+	--purple2: #4b0085;
+	--blackberry: #270045;
+	--proxima: proxima-nova, sans-serif;
+	--proximaCon: proxima-nova-condensed, sans-serif;
+	--roboto: roboto, sans-serif;
+	--robotoCon: roboto condensed, sans-serif;
+	--green-glow: rgba(32, 245, 201, 0.5);
+}
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
 html {
-	
 	background-image: url("/images/Background.jpg");
 	background-repeat: repeat-x;
 	background-position: top;
 }
 body {
 	height: 100vh;
+	width: 100%;
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas:
-		"header header header"
-		"main main main"
-		"footer footer footer";
+		"header"
+		"main"
+		"footer";
 }
-
-header,
-main {
+header, main {
 	width: 100%;
-	box-sizing: border-box;
 	margin: 0 auto;
 }
 header {
 	grid-area: header;
+	max-width: 1200px;
 	display: grid;
 	padding: 10px;
-	grid-template-columns: auto 40% auto;
+	grid-template-columns: auto 1fr auto;
 	grid-template-rows: auto auto;
 	grid-template-areas:
 		"nav logo cart"
 		"search search search";
 }
-
 main {
 	grid-area: main;
 }
 footer {
 	height: 200px;
-	background-color: #270045;
+	background-color: var(--blackberry);
 	margin: 0 auto;
 	width: 100%;
 	grid-area: footer;
 }
 /*FONT STYLES*/
 p {
-	font-family: proxima nova, sans-serif;
+	font-family: var(--proxima);
 	font-size: 1rem;
-	font-weight: 300;
-	color: #270045;
+	color: var(--blackberry);
+}
+h1, h2, h3{
+	font-family: var(--proximaCon);
 }
 h1 {
-	font-family: proxima-nova-condensed, sans-serif;
-	color: #7700d1;
+	color: var(--purple1);
 	text-transform: uppercase;
 	font-size: 2rem;
 	letter-spacing: .1rem;
 }
-h2{
-	font-family: proxima-nova-condensed, sans-serif;
-	font-weight: 500;
-	font-size: 1.5rem;
-
+p, a{
+	font-family: var(--proxima);
 }
-
-h3 {
-	font-family: proxima-nova-condensed, sans-serif;
-	font-weight: 900;
-	font-size: 1.5rem;
-	text-transform: uppercase;
+p {
+	font-size: 1rem;
+	color: var(--blackberry);
 }
-
-/* link Styles*/
-a {
-	font-family: proxima-nova, sans-serif;
+a, .button{
 	cursor: pointer;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -85,89 +90,81 @@ a {
 	max-height: 40px;
 	padding: 10px 15px;
 	border-radius: 50px;
-	box-sizing: border-box;
-	cursor: pointer;
-	text-transform: uppercase;
 	text-align: center;
 }
-
 .greenWhite-button {
-	background-color: #20f5c9;
+	background-color: var(--green);
 }
 .greenWhite {
-	color: #20f5c9;
+	color: var(--green);
 }
 .greenWhite:hover {
 	color: #fff;
 }
 .greenWhite-button:hover {
 	background-color: #fff;
-	border: 2px solid #20f5c9;
-	color: #7700d1;
+	border: 2px solid var(--green);
+	color: var(--purple1);
 }
 
 .purpleGreen-button {
-	background-color: #4b0085;
-	color: #20f5c9;
+	background-color: var(--purple2);
+	color: var(--green);
 	cursor: pointer;
 }
 
 .purpleGreen-button:hover {
-	background-color: #7700d1;
+	background-color: var(--purple1);
 }
 
 .greenbutton {
 	background-color: #fff;
-	color: #7700d1;
+	color: var(--purple1);
 }
 
 .greenbutton:hover {
-	background-color: #7700d1;
+	background-color: var(--purple1);
 	color: #4fff;
 }
 
 .violetGreen-button {
-	background-color: #7700d1;
+	background-color: var(--purple1);
 	color: #fff;
 }
 
 .violetGreen-button:hover {
-	background-color: #20f5c9;
+	background-color: var(--green);
 }
 
 .section1 {
 	width: 95%;
 	height: auto;
 	margin: 20px auto;
-	box-sizing: border-box;
 	text-align: center;
 }
 .section1 h1 {
 	font-size: 2.5em;
 	font-weight: 900;
-	color: #7700d1;
+	color: var(--purple1);
 	margin: 0;
 }
 .section1 h2 {
-	color: #270045;
+	color: var(--blackberry);
 }
 .section1 a {
-	text-decoration: none;
 	border-radius: 20px;
 	padding: 10px 20px;
-	font-size: 1em;
 	font-weight: 600;
 	margin: 30px auto;
 	display: block;
 	width: 60%;
 	max-width: 200px;
-	background-color:#d10073;
+	background-color:var(--red);
 	color: #fff;
 }
 .section1 a:hover {
-	
 	color: #fff;
-	background-color: #7700d1;
+	background-color: var(--purple1);
 }
 
 .section2{
@@ -177,8 +174,6 @@ a {
 	padding: 10px 0 ;
 	width: 100%;
 	height: auto;
-	box-sizing: border-box;
-
 }
 .section2 h2{
 	text-transform: uppercase;
@@ -196,7 +191,6 @@ a {
 	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   	grid-gap: 10px;
 	padding: 20px;
-	box-sizing: border-box;
 	align-items: start;
 
 }
@@ -213,7 +207,7 @@ a {
 	font-weight: bold;
 	font-size: .8rem;
 	margin: 0;
-	color: #4b0085;
+	color: var(--purple2);
 	align-self: start;
 }
 .smGameBox figcaption{
@@ -229,7 +223,7 @@ a {
 	object-fit: cover;
 	object-position: 100% 0;
 	align-self: start;
-	background-color: #20f5c9;
+	background-color: var(--green);
 }
 .section3 {
 	display: flex;
@@ -245,22 +239,20 @@ a {
 }
 
 .section3 h3:hover {
-	color: #20f5c9;
+	color: var(--green);
 }
 .section4 {
 	width: 100%;
 	margin: 0 auto;
 	padding: 50px 0;
-	background-color: #4b0085;
-	background-image: linear-gradient(to bottom right, #4b0085, #270045);
+	background-color: var(--purple2);
+	background-image: linear-gradient(to bottom right, var(--purple2), var(--blackberry));
 	display: flex;
 	flex-direction: column;
-	align-content: center;
-	
-
+	align-content: center
 }
 .section4 h2 {
-	color: #20f5c9;
+	color: var(--green);
 	font-size: 2rem;
 	margin: 0;
 	padding: 0;
@@ -278,14 +270,13 @@ a {
 	padding: 0px;
 }
 .section4 li {
-	font-family: roboto, sans-serif;
+	font-family: var(--roboto);
 	font-weight: 500;
 	font-size: 1.5em;
 	margin: 20px 0;
 	color: #fff;
 }
 .smallbox {
-	box-sizing: border-box;
 	padding: 0px;
 	text-align: center;
 	cursor: pointer;
@@ -293,7 +284,7 @@ a {
 	height: 100px;
 	display: flex;
 	justify-content: center;
-	background-color: #270045;
+	background-color: var(--blackberry);
 	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 	width: auto;
 }
@@ -325,8 +316,8 @@ a {
 	margin: 30px auto;
 	display: block;
 	width: 60%;
-	border: 2px solid #20f5c9;
-	color: #20f5c9;
+	border: 2px solid var(--green);
+	color: var(--green);
 }
 .section4 a:hover {
 	border: 2px solid #fff;
@@ -336,9 +327,9 @@ a {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	border: 6px solid #20f5c9;
+	border: 6px solid var(--green);
 	margin: 20px auto;
-	box-shadow: 0px 0px 30px 0px rgba(32, 245, 201, 0.5);
+	box-shadow: 0px 0px 30px 0px var(--green-glow);
 }
 /*LOGO*/
 #logo-container {
@@ -361,7 +352,7 @@ nav,
 }
 
 .hamburger-label {
-	color: #20f5c9;
+	color: var(--green);
 	font-size: 2em;
 	grid-area: nav;
 	justify-self: start;
@@ -401,50 +392,55 @@ nav a {
 	font-weight: 200;
 	font-size: 1em;
 	text-transform: uppercase;
-	color: #4b0085;
+	color: var(--purple2);
 }
 nav a:hover {
-	color: #d10073;
+	color: var(--red);
 }
 
 .active {
-	color: #d10073;
+	color: var(--red);
 }
 
 /*Shopping Cart*/
-.cart {
+#cartWrap {
 	grid-area: cart;
 	justify-self: end;
 	margin: 0px 0px;
 	position: relative;
+	padding: 0;
+	z-index: 0;
+	width: auto;
+	height:auto;
+	font-size: 1.2rem;
 }
-
-.cart a {
-	font-size: 1em;
-}
-#cartNumber {
-	position: absolute;
+#cart{
+	position: relative;
 	z-index: 10;
-	color: #d10073;
-	background-color: #fff;
-	margin: auto;
-	border-radius: 50px;
-	height: 15px;
-	width: 15px;
-	text-align: center;
-	left: 25px;
-	top: -5px;
-	font-family: roboto, sans-serif;
-	font-weight: 900;
-	font-size: 0.8em;
-	line-height: 15px;
+}
+.cartInactive{
+	color: var(--green);
+}
+.cartActive{
+	color: #fff;
+}
+#cartItem{
+	position: absolute;
+	color: var(--red);
+	font-size: .6rem;	
+	font-family: var(--robotoCon);
+	z-index: 15;
+	top: 8px;
+	left: 50%;
+	font-weight: 600;
+	
 }
 /*Search Bar*/
 
 #search {
 	grid-area: search;
 	justify-self: center;
-
+	align-self: center;
 	height: 40px;
 	width: 80%;
 	display: flex;
@@ -452,7 +448,7 @@ nav a:hover {
 	background-color: #fff;
 	padding: 0px;
 	outline: none;
-	border: 2px solid #4b0085;
+	border: 2px solid var(--purple2);
 	border-radius: 25px;
 	margin-top: 30px;
 }
@@ -471,8 +467,8 @@ nav a:hover {
 
 #search button {
 	color: #fff;
-	background-color: #4b0085;
-	border: 1px solid #4b0085;
+	background-color: var(--purple2);
+	border: 1px solid var(--purple2);
 	padding: 5px 5px;
 	display: inline-block;
 	margin: 0px;
@@ -485,7 +481,7 @@ nav a:hover {
 
 #search button:hover {
 	color: #fff;
-	background-color: #7700d1;
+	background-color: var(--purple1);
 }
 
 /*TABBED MENU*/
@@ -495,7 +491,7 @@ nav a:hover {
 	min-height: 300px;
 	clear: both;
 	margin: 25px 0;
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 }
 
 .tab {
@@ -511,7 +507,7 @@ nav a:hover {
 	position: relative;
 	left: 1px;
 	cursor: pointer;
-	color: #4b0085;
+	color: var(--purple2);
 	font-family: inherit;
 	text-transform: uppercase;
 	font-size: 0.8em;
@@ -519,7 +515,7 @@ nav a:hover {
 }
 
 .tab label:hover {
-	color: #7700d1;
+	color: var(--purple1);
 }
 .tab [type="radio"] {
 	opacity: 0;
@@ -549,7 +545,7 @@ nav a:hover {
 [type="radio"]:checked ~ label {
 	background: white;
 	border-bottom: 1px solid white;
-	color: #7700d1;
+	color: var(--purple1);
 	z-index: 2;
 }
 
@@ -571,10 +567,10 @@ nav a:hover {
 	height: 300px;
 	text-align: center;
 	padding: 30px;
-	box-sizing: border-box;
+	
 	display: block;
 	margin: 0 auto;
-	background-color: #4b0085;
+	background-color: var(--purple2);
 }
 .confirm h1 {
 	margin: 20px auto;
@@ -589,18 +585,18 @@ nav a:hover {
 
 .form-card {
 	border-radius: 25px;
-	background-image: linear-gradient(to bottom right, #4b0085, #270045);
+	background-image: linear-gradient(to bottom right, var(--purple2), var(--blackberry));
 	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.5);
 	width: 90%;
 	max-width: 400px;
 	margin: auto;
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 	font-style: normal;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
-	color: #20f5c9;
-	box-sizing: border-box;
+	color: var(--green);
+	
 	padding: 20px;
 }
 
@@ -608,15 +604,15 @@ nav a:hover {
 	text-align: left;
 	margin: 0 auto 5px auto;
 	width: 80%;
-	border-top: 1px solid #20f5c9;
-	box-sizing: border-box;
+	border-top: 1px solid var(--green);
+	
 	padding-top: 30px;
 }
 
 .form-card input,
 textarea {
 	font-size: 120%;
-	box-sizing: border-box;
+	
 	width: 100%;
 	height: auto;
 	margin: 10px auto 20px auto;
@@ -632,7 +628,7 @@ textarea {
 }
 
 .form-card h1 {
-	font-family: roboto condensed, sans-serif;
+	font-family: var(--robotoCon);
 	color: #fff;
 	margin: 0;
 }
@@ -647,13 +643,13 @@ textarea {
 .plus-minus {
 	background-color: #fff;
 	display: flex;
-	color: #4b0085;
+	color: var(--purple2);
 	width: 80px;
 	height: 40px;
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px;
-	box-sizing: border-box;
+	
 	border-radius: 50px;
 	font-size: 1em;
 }
@@ -662,7 +658,7 @@ textarea {
 
 @media screen and (min-width: 700px) {
 	header {
-		padding: 10px 50px;
+		padding: 10px 30px;
 	}
 	#search {
 		width: 60%;
@@ -673,15 +669,18 @@ textarea {
 		html {
 			background-position-y: 50px;
 		}
-
+		
 		header {
 			display: grid;
 			margin: 0 auto 40px auto;
-			grid-template-columns: 35% auto 20%;
-			grid-template-rows: 21% auto;
+			grid-template-columns: 35% 1fr auto;
+			grid-template-rows: auto 1fr;
 			grid-template-areas:
-				"logo nav nav"
-				"logo search cart";
+				"logo nav cart"
+				"logo search search";
+		}
+		nav {
+			padding-right: 10px;
 		}
 		h1 {
 			font-size: 1.5em;
@@ -690,6 +689,7 @@ textarea {
 			grid-area: logo;
 			justify-self: start;
 			margin-top: 5px;
+			
 		}
 		#logo {
 			max-width: 320px;
@@ -698,20 +698,18 @@ textarea {
 			display: none;
 		}
 		nav {
-			display: inline-block;
+			display: flex;
+			flex-direction: row;
 			grid-area: nav;
-			width: 100%;
-			padding: 0;
-			margin: 0;
+			width: auto;
 			position: static;
+			justify-content: flex-end;
 		}
 
 		nav ul {
 			padding: 0px;
 			width: auto;
 			border-radius: 0;
-			float: right;
-			position: static;
 			margin: 0;
 			background-color: rgba(255, 255, 255, 0);
 		}
@@ -731,56 +729,37 @@ textarea {
 		}
 
 		.cart {
-			background-color: #ffffff;
+			background-color: var(--purple2);
 			border-radius: 50%;
-			width: 68px;
-			height: 68px;
-			display: flex;
-			justify-content: center;
-			box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+			/*box-shadow: 1px 1px 15px 2px var(--green-glow);*/
 			grid-area: cart;
 			justify-self: end;
-			margin-top: 20px;
+			padding: 20px;
 		}
 		.cart a {
-			color: #7700d1;
+			color: var(--green);
 			margin: auto;
+			font-size: 1.2rem;
 		}
-		.cart a:hover {
-			color: #4b0085;
-		}
+		
+		
 
-		#cartNumber {
-			position: absolute;
-			z-index: 10;
-			color: #fff;
-			background-color: #d10073;
-			margin: auto;
-			border-radius: 50px;
-			padding: 3px;
-			height: 15px;
-			width: 15px;
-			text-align: center;
-			right: -5px;
-			top: 10px;
-			font-family: roboto, sans-serif;
-			font-size: 0.8em;
-			line-height: 15px;
-		}
+	
 		#search {
 			grid-area: search;
 			justify-self: end;
+			align-self: start;
 			height: 45px;
-			width: 80%;
-			margin: 30px 0 0 0;
+			width: 350px;
+			margin: 30px 80px 0 0 ;
 			display: flex;
 			align-items: center;
 			outline: none;
-			border: none;
+			border: 0 none;
 		}
 
 		#search button {
-			background-color: #20f5c9;
+			background-color: var(--green);
 			border: none;
 		}
 		.section1, .section2, .section3{
@@ -848,18 +827,11 @@ textarea {
 		body {
 			grid-template-rows: auto 1fr auto;
 		}
-		header {
-			grid-template-columns: 30% auto 10%;
-			width: 75%;
-		}
 
 		#logo {
 			max-width: 320px;
 		}
-		#search {
-			width: 60%;
-			justify-self: end;
-		}
+		
 
 		nav a {
 			font-size: 1em;

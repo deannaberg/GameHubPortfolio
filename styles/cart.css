@@ -1,17 +1,17 @@
 .cart-titles {
 	width: 100%;
-	border-bottom: 1px solid #4b0085;
+	border-bottom: 1px solid var(--purple2);
 	margin: 0 auto 10px auto;
 	text-align: left;
 }
 
 .item-grid {
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 	display: grid;
 	width: 100%;
 	height: auto;
 	margin: auto;
-	box-sizing: border-box;
+	
 	grid-template-columns: 30% auto;
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
@@ -31,7 +31,7 @@
 }
 .area2 p {
 	margin: 0;
-	color: #4b0085;
+	color: var(--purple2);
 	font-size: 0.8em;
 }
 
@@ -39,7 +39,7 @@
 	font-size: 1em;
 	text-transform: uppercase;
 	margin: 0;
-	color: #4b0085;
+	color: var(--purple2);
 }
 
 .area3 {
@@ -53,20 +53,20 @@
 
 .area3 p {
 	font-size: 1.2em;
-	font-family: roboto condensed, sans-serif;
+	font-family: var(--robotoCon);
 	margin: 0;
-	color: #4b0085;
+	color: var(--purple2);
 }
 .area4 {
 	grid-area: area4;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	background-color: #4b0085;
+	background-color: var(--purple2);
 	margin: 5px auto;
 }
 .area4 a {
-	color: #20f5c9;
+	color: var(--green);
 	margin: 5px;
 	font-size: 0.8em;
 	cursor: pointer;
@@ -80,7 +80,7 @@
 }
 
 .plus-minus {
-	background-color: #4b0085;
+	background-color: var(--purple2);
 	color: #fff;
 	font-size: 0.6em;
 	margin-bottom: 0px;

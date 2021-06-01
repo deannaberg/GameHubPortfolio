@@ -10,21 +10,21 @@
 	padding-left: 20px;
 }
 #checkoutSteps h1 {
-	color:#7700d1;
+	color:var(--purple1);
 }
 #checkoutSteps a {
-	box-sizing: border-box;
-	font-family: roboto condensed, sans-serif;
+	
+	font-family: var(--robotoCon);
 	text-transform: uppercase;
 	font-size: 1.5em;
-	color:#7700d1;
+	color:var(--purple1);
 	font-weight: 900;
-	border-left: 1px solid #4b0085;
+	border-left: 1px solid var(--purple2);
 	margin-left:10px;
 	padding-left: 10px;
 }
 #checkoutSteps a:hover{
-	color: #4b0085;
+	color: var(--purple2);
 }
 #c-wrap1 {
 	width: 90%;
@@ -40,8 +40,8 @@
 #checkout {
 	margin: auto;
 	width: 90%;
-	color: #4b0085;
-	font-family: proxima-nova, sans-serif;
+	color: var(--purple2);
+	font-family: var(--proxima);
 	font-style: normal;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -49,8 +49,8 @@
 }
 
 	h1, h2 {
-	font-family: roboto condensed, sans-serif;
-	color: #4b0085;
+	font-family: var(--robotoCon);
+	color: var(--purple2);
 	font-size: 1.2em;
 	letter-spacing: normal;
 	text-transform: uppercase;
@@ -79,7 +79,7 @@ textarea {
 	margin: 0 auto 0px auto;
 	padding: 10px;
 	outline: none;
-	box-sizing: border-box;
+	
 	background-color: rgba(0, 0, 0, 0.03);
 	border: none;
 	border-radius: 5px;
@@ -93,12 +93,12 @@ textarea {
 
 #order-sum {
 	border-radius: 12px;
-	background-image: linear-gradient(to bottom right, #4b0085, #270045);
+	background-image: linear-gradient(to bottom right, var(--purple2), var(--blackberry));
 	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.5);
 	width: 70%;
 	height: auto;
 	margin: 0 auto 10px auto;
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 	font-style: normal;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -117,12 +117,12 @@ textarea {
 	margin-bottom: 20px;
 }
 .item-r {
-	border-bottom: 1px solid #20f5c9;
+	border-bottom: 1px solid var(--green);
 	text-align: right;
 }
 
 .item-l {
-	border-bottom: 1px solid #20f5c9;
+	border-bottom: 1px solid var(--green);
 	text-align: left;
 }
 
@@ -152,20 +152,20 @@ textarea {
 	width: 100%;
 	height: auto;
 	padding: 0px 5%;
-	box-sizing: border-box;
+	
 	text-align: left;
 }
 
 .review {
-	font-family: proxima-nova, sans-serif;
-	color: #7700d1;
+	font-family: var(--proxima);
+	color: var(--purple1);
 	font-size: 0.8em;
 	text-transform: uppercase;
 	margin-left: 5px;
 	font-weight: normal;
 }
 a:hover {
-	color:#270045;
+	color:var(--blackberry);
 }
 h4 {
 	margin: 0;
@@ -174,7 +174,7 @@ h4 {
 
 /*#checkout-confirmation h1, h2 {
 	font-family: roboto-condensed, sans-serif;
-	color: #7700d1;
+	color: var(--purple1);
 	text-transform: uppercase;
 	font-size: 1.5em;
 	margin: 0;
@@ -182,7 +182,7 @@ h4 {
 
 #checkout-confirmation h3 {
 	display: inline;
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 	font-size: 1em;
 	margin-right: 5px;
 	font-weight: bold;
@@ -190,10 +190,10 @@ h4 {
 #checkout-confirmation ul {
 	list-style-type: none;
 	padding: 0;
-	font-family: proxima nova, sans-serif;
+	font-family: var(--proxima);
 	font-size: 1em;
 	font-weight: 400;
-	color: #270045;
+	color: var(--blackberry);
 	z-index: 10;
 }
 
@@ -215,19 +215,19 @@ h4 {
 }
 
 .row1 {
-	border-bottom: 1px solid #4b0085;
-	font-family: roboto condensed, sans-serif;
+	border-bottom: 1px solid var(--purple2);
+	font-family: var(--robotoCon);
 	font-size: 0.8em;
 	text-transform: uppercase;
 	font-weight: 600;
-	color: #4b0085;
+	color: var(--purple2);
 	height: 20px;
 }
 
 .row2 {
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 	font-size: .8em;
-	color: #270045;
+	color: var(--blackberry);
 }
 
 .review-img {

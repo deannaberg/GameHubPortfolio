@@ -7,8 +7,8 @@
 		"title price"
 		"details details";
 	align-content: start;
-	font-family: proxima-nova, sans-serif;
-	box-sizing: border-box;
+	font-family: var(--proxima);
+	
 	margin: 5px auto;
 	width: 90%;
 	max-width: 960px;
@@ -22,20 +22,20 @@
 	/*flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;*/
-	box-sizing: border-box;
+	
 	max-width: 960px;
 	margin: 10px auto;
 	padding: 10px;
 }
 #searchResults {
 	text-align: left;
-	border-bottom: 2px solid #4b0085;
+	border-bottom: 2px solid var(--purple2);
 	width: 90%;
 	margin: 20px auto;
 }
 h2 {
-	font-family: roboto condensed, sans-serif;
-	color: #4b0085;
+	font-family: var(--robotoCon);
+	color: var(--purple2);
 	margin: 0;
 	font-size: 1.2rem;
 	text-transform: none;
@@ -43,9 +43,9 @@ h2 {
 }
 
 h3 {
-	font-family: roboto condensed, sans-serif;
+	font-family: var(--robotoCon);
 	font-size: 1.5em;
-	color: #4b0085;
+	color: var(--purple2);
 	margin: 0;
 	text-transform: none;
 }
@@ -56,10 +56,10 @@ h3 {
 }
 #price-box {
 grid-area: price;
-box-sizing: border-box;
+
 min-width: 185px;
 height: 230px;
-background-color: #4b0085;
+background-color: var(--purple2);
 text-align: center;
 border-radius: 20px;
 color: #fff;
@@ -74,23 +74,23 @@ justify-content: space-between;
 	height: auto;
 }
 .itemPrice {
-	font-family: roboto condensed, sans-serif;
+	font-family: var(--robotoCon);
 	font-weight: 900;
 	font-size: 1.8rem;
-	color: #20f5c9;
+	color: var(--green);
 	margin: 0;
 }
 .price-box-button {
-	color: #d10073;
+	color: var(--red);
 	background-color: #fff;
 	margin-top: 20px;
 }
 
 .price-box-button:hover {
-	color: #7700d1;
+	color: var(--purple1);
 }
 .availability {
-	color: #20f5c9;
+	color: var(--green);
 	font-size: 1rem;
 	margin: 0;
 	
@@ -103,13 +103,13 @@ justify-content: space-between;
 }
 
 .title h1{
-	color: #7700d1;
+	color: var(--purple1);
 	font-size: 1.2rem;
 	margin: 0;
 }
 
 .title p {
-	color: #d10073;
+	color: var(--red);
 	font-weight: 600;
 	margin-bottom: -10px;
 	font-size: .8rem;
@@ -121,7 +121,7 @@ justify-content: space-between;
 	box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.2);
 	padding: 15px;
 	width: 100%;
-	box-sizing: border-box;
+	
 	margin-bottom: 30px;
 	
 }
@@ -135,7 +135,7 @@ justify-content: space-between;
 	align-items: center;
 	box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.2);
 	width: 100%;
-	box-sizing: border-box;
+	
 	background-color: #fff;
 	border-radius: 10px 10px;
 
@@ -144,7 +144,7 @@ justify-content: space-between;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	box-sizing: border-box;
+	
 	padding: 10px;
 	height: 85%;
 }
@@ -152,7 +152,7 @@ justify-content: space-between;
 .productCard p {
 	font-size: 0.6em;
 	font-weight: 500;
-	color: #d10073;
+	color: var(--red);
 	margin: 0;
 	padding: 0 10px;
 	align-self: start;
@@ -173,25 +173,25 @@ justify-content: space-between;
 .productCardButton {
 	width: 100%;
 	border-radius: 0px 0px 10px 10px;
-	background-color: #4b0085;
-	color: #20f5c9;
+	background-color: var(--purple2);
+	color: var(--green);
 	font-size: 1em;
 	padding: 10px 0;
 	display: block;
 	text-align: center;
-	box-sizing: border-box;
+	
 	text-transform: uppercase;
 }
 
 .productCardButton:hover {
-	background-color:#d10073;
+	background-color:var(--red);
 	color:#fff;
 }
 .productCard a {
 	text-decoration: none;
 }
 .productCard h2:hover {
-	color: #7700d1;
+	color: var(--purple1);
 }
 
 .productImg {
@@ -201,7 +201,7 @@ justify-content: space-between;
 	display: block;
 	object-fit: cover;
 	object-position: 100% 0%;
-	box-sizing: border-box;
+	
 	border-radius: 10px 10px 0 0;
 }
 
@@ -212,8 +212,8 @@ justify-content: space-between;
 }
 
 .plus-minus p {
-	color: #4b0085;
-	font-family: roboto condensed, sans-serif;
+	color: var(--purple2);
+	font-family: var(--robotoCon);
 	font-weight: 500;
 }
 
@@ -226,8 +226,8 @@ justify-content: space-between;
 			"image title price"
 			"image details details";
 		align-content: start;
-		font-family: proxima-nova, sans-serif;
-		box-sizing: border-box;
+		font-family: var(--proxima);
+		
 		margin: 5px auto;
 		max-width: 960px;
 	}

@@ -1,23 +1,23 @@
 .contact-info h2 {
-    font-family: proxima nova, sans-serif;
+    font-family: var(--proxima);
     font-size: 1.5em;
     font-weight: 400;
-    color: #4B0085;
+    color: var(--purple2);
 }
 
 .contact-info p  {
     font-size: 1.2em;
     font-weight: 400;
-    color: #4B0085;
+    color: var(--purple2);
    
 }
 
 .contact-info a {
-    color: #270045;
+    color: var(--blackberry);
 }
 .contact-info .fas {
     margin-right: 10px;
-    color: #4B0085
+    color: var(--purple2)
 }
 .form-error{
     margin-top: 0;
@@ -32,8 +32,8 @@
 }
 
 #contactSuccess {
-    color: #d10073;
-    font-family: proxima nova, sans-serif;
+    color: var(--red);
+    font-family: var(--proxima);
     font-size: 1.5em;
     font-weight: 900;
 }

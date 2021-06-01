@@ -1,92 +1,99 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Home</title>
-		<meta
-			name="description"
-			content="The earth's largest marketplace for gamers to buy, sell, and pre-order video games."
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!--Style Sheets-->
-		<link href="styles/styles.css" rel="stylesheet" />
+<head>
+	<title>Home</title>
+	<meta name="description"
+		content="The earth's largest marketplace for gamers to buy, sell, and pre-order video games." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!--Fonts-->
-		<link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css" />
+	<!--Style Sheets-->
+	<link href="styles/styles.css" rel="stylesheet" />
 
-		<!--Font Awesome Script-->
-		<script
-			src="https://kit.fontawesome.com/a8fae1eb2c.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
-	<body>
-		<header>
-				<!--Hamburger Menu-->
-				<label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
-				<input type="checkbox" id="hamburger-menu" />
+	<!--Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css" />
 
-				<!--Navigation-->
-				<nav>
-					<ul>
-						<li>
-							<a class="" href="index.html"><i class="fas fa-globe-americas"></i>Home</a>
-						</li>
-						<li>
-							<a class="" href="game/index.html"><i class="fas fa-gamepad"></i>Shop</a>
-						</li>
-						<li>
-							<a class="" href="account/index.html"><i class="fas fa-user"></i>log in/Join</a>
-						</li>
-						<li>
-							<a class="" href="contact/index.html"><i class="fas fa-envelope"></i>Contact</a>
-						</li>
-					</ul>
-				</nav>
+	<!--Font Awesome Script-->
+	<script src="https://kit.fontawesome.com/a8fae1eb2c.js" crossorigin="anonymous"></script>
+</head>
 
-				<!--Logo-->
+<body>
+	<header>
+		<!--Hamburger Menu-->
+		<label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
+		<input type="checkbox" id="hamburger-menu" />
 
-				<a id="logo-container" href="index.html">
-					<img id="logo" src="svg/gamehub-logo-mobile.svg" alt="Game Hub Logo"/>
-				</a>
+		<!--Navigation-->
+		<nav>
+			<ul>
+				<li>
+					<a class="" href="index.html"><i class="fas fa-globe-americas"></i>Home</a>
+				</li>
+				<li>
+					<a class="" href="game/index.html"><i class="fas fa-gamepad"></i>Shop</a>
+				</li>
+				<li>
+					<a class="" href="account/index.html"><i class="fas fa-user"></i>log in/Join</a>
+				</li>
+				<li>
+					<a class="" href="contact/index.html"><i class="fas fa-envelope"></i>Contact</a>
+				</li>
+			</ul>
+		</nav>
 
-				<!--Search Bar-->
-				<form id="search">
-					<input type="search" name="search" placeholder="search the universe"/>
-					<button onclick="location.href='game/search.html'" type="button">
-						<i class="fas fa-search"></i>
-					</button>
-				</form>
+		<!--Logo-->
 
-				<!--Cart Button-->
-				<div class="cart">
-					<div id="cartNumber">1</div>
-					<a class="greenWhite" href="checkout/cart.html"
-						><i class="fas fa-shopping-cart fa-2x"></i
-					></a>
+		<a id="logo-container" href="index.html">
+			<img id="logo" src="svg/gamehub-logo-mobile.svg" alt="Game Hub Logo" />
+		</a>
+
+		<!--Search Bar-->
+		<form id="search">
+			<input type="search" name="search" placeholder="search the universe" />
+			<button onclick="location.href='game/search.html'" type="button">
+				<i class="fas fa-search"></i>
+			</button>
+		</form>
+
+		<!--Cart Button-->
+		<div id="cartWrap">
+			<a id="cart" class="cartActive" href="checkout/cart.html"><i id="cartIcon"
+					class="fas fa-shopping-cart fa-2x"></i></a>
+			<div id="cartItem">23</div>
+		</div>
+	</header>
+
+	<!--Main Section-->
+	<main>
+		<section class="section1">
+			<h1 id="game-on">Get Your Game On!</h1>
+			<h2>Game Hub is the largest video game marketplace in the universe</h2>
+			<a href="#">learn more</a>
+		</section>
+		<section class="section2">
+
+			<div id="featuredGames"></div>
+		</section>
+		<section class="section3">
+			<a href="game/index.html">
+				<div class="smallbox" id="box1">
+					<h3>shop best sellers <i class="fas fa-arrow-alt-circle-right"></i></h3>
 				</div>
-			</div>
-		</header>
-
-		<!--Main Section-->
-		<main>
-			<section class="section1">
-				<h1 id="game-on">Get Your Game On!</h1>
-				<h2>Game Hub is the largest video game marketplace in the universe</h2>
-				<a href="#">learn more</a>
-			</section>
-			<section class="section2">
-				
-				<div id="featuredGames"></div>
-			</section>
-			<section class="section3">
-				<a href="game/index.html"><div class="smallbox" id="box1"><h3>shop best sellers <i class="fas fa-arrow-alt-circle-right"></i></h3></div></a>
-				<a href="game/index.html"><div class="smallbox" id="box2"><h3>shop new releases <i class="fas fa-arrow-alt-circle-right"></i></h3></div></a>
-				<a href="game/index.html"><div class="smallbox" id="box3"><h3>shop vintage <i class="fas fa-arrow-alt-circle-right"></i></h3></div></a>
-			</section>
-			<section class="section4background section4">
-				<img id="user-img" src="images/user.jpg" alt="image of user avatar"/>
-				<div id="section4details">
+			</a>
+			<a href="game/index.html">
+				<div class="smallbox" id="box2">
+					<h3>shop new releases <i class="fas fa-arrow-alt-circle-right"></i></h3>
+				</div>
+			</a>
+			<a href="game/index.html">
+				<div class="smallbox" id="box3">
+					<h3>shop vintage <i class="fas fa-arrow-alt-circle-right"></i></h3>
+				</div>
+			</a>
+		</section>
+		<section class="section4background section4">
+			<img id="user-img" src="images/user.jpg" alt="image of user avatar" />
+			<div id="section4details">
 				<h2 id="section4heading">Become a GameHub<br />Member and</h2>
 				<ul id="section4list">
 					<li>never miss a new release</li>
@@ -96,12 +103,13 @@
 					<li>sell your used games through GameHub!</li>
 				</ul>
 				<a id="section4button" class="" href="../account/create-account.html">Sign Me Up!</a>
-				</div>
-			</section>
-		</main>
-		<footer>
-			footer content here
-		</footer>
-		<script src="js/featured.js"></script>
-	</body>
+			</div>
+		</section>
+	</main>
+	<footer>
+		footer content here
+	</footer>
+	<script src="js/featured.js"></script>
+</body>
+
 </html>

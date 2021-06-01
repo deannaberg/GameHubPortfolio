@@ -3,7 +3,7 @@
       width: 100%;
       max-width: 800px;
       padding: 0 10px;
-      box-sizing: border-box;
+      
       margin: auto;
   }
   ol {
@@ -29,7 +29,7 @@
   .productContentTop p:first-of-type {
     font-size: 1rem;
     font-weight: bold;
-    font-family: proxima-nova-condensed, sans-serif;
+    font-family: var(--proximaCon);
     letter-spacing: .05rem;
     margin-top: 10px;
     
@@ -50,8 +50,8 @@
   }
   
   .button{
-    box-sizing: border-box;
-    background-color:#7700d1;
+    
+    background-color:var(--purple1);
     text-align: center;
     padding: 10px 30px;
     border-radius: 10px;
@@ -63,7 +63,7 @@
     margin: 10px 0;
   }
   .button:hover{
-    background-color: #4b0085;
+    background-color: var(--purple2);
   }
   
   
@@ -84,12 +84,12 @@
       "image bottom";
     margin: auto;
     max-height: 160px;
-    box-sizing: border-box;
+    
     width: 100%;
     margin: auto;
     padding-right: 10px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
+    
   }
 
 
@@ -99,8 +99,8 @@
     align-items: center;
     grid-area: bottom;
     width: 100%;
-    border-top:2px solid #4b0085;
-    box-sizing: border-box;
+    border-top:2px solid var(--purple2);
+    
   }
   
   .productContentBottom p, a {
