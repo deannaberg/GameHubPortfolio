@@ -161,11 +161,13 @@ a {
 	display: block;
 	width: 60%;
 	max-width: 200px;
-	border: 2px solid #d10073;
+	background-color:#d10073;
+	color: #fff;
 }
 .section1 a:hover {
-	border: 2px solid #7700d1;
-	color: #7700d1;
+	
+	color: #fff;
+	background-color: #7700d1;
 }
 
 .section2{
