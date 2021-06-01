@@ -1,0 +1,43 @@
+.contact-info h2 {
+    font-family: proxima nova, sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #4B0085;
+}
+
+.contact-info p  {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #4B0085;
+   
+}
+
+.contact-info a {
+    color: #270045;
+}
+.contact-info .fas {
+    margin-right: 10px;
+    color: #4B0085
+}
+.form-error{
+    margin-top: 0;
+    text-transform:lowercase;
+    color: #fff;
+    display: none;
+}
+
+.contactButton {
+    border:none;
+    border-radius: 50px;
+}
+
+#contactSuccess {
+    color: #d10073;
+    font-family: proxima nova, sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+
+
+

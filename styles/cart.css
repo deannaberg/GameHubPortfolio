@@ -1,0 +1,99 @@
+.cart-titles {
+	width: 100%;
+	border-bottom: 1px solid #4b0085;
+	margin: 0 auto 10px auto;
+	text-align: left;
+}
+
+.item-grid {
+	font-family: proxima-nova, sans-serif;
+	display: grid;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	box-sizing: border-box;
+	grid-template-columns: 30% auto;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"area1 area2"
+		"area1 area3"
+		"area4 area4";
+}
+
+.area1 {
+	grid-area: area1;
+	margin-right: 5px;
+}
+.area2 {
+	grid-area: area2;
+	text-align: left;
+	margin-bottom: 5px;
+}
+.area2 p {
+	margin: 0;
+	color: #4b0085;
+	font-size: 0.8em;
+}
+
+.area2 h2 {
+	font-size: 1em;
+	text-transform: uppercase;
+	margin: 0;
+	color: #4b0085;
+}
+
+.area3 {
+	grid-area: area3;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 5px;
+}
+
+.area3 p {
+	font-size: 1.2em;
+	font-family: roboto condensed, sans-serif;
+	margin: 0;
+	color: #4b0085;
+}
+.area4 {
+	grid-area: area4;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: #4b0085;
+	margin: 5px auto;
+}
+.area4 a {
+	color: #20f5c9;
+	margin: 5px;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+.area4 a:hover {
+	color: #fff;
+}
+.area4 .fas {
+	margin-right: 5px;
+}
+
+.plus-minus {
+	background-color: #4b0085;
+	color: #fff;
+	font-size: 0.6em;
+	margin-bottom: 0px;
+	height: auto;
+	width: 50px;
+}
+
+.plus-minus p {
+	color: #fff;
+}
+
+.product-image{
+	width: 100%;
+	height: auto;
+	justify-self: left;
+}
