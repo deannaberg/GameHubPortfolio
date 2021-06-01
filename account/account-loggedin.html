@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Account Success</title>
+		<title>Account Logged-In</title>
 		<meta
 			name="description"
-			content="You have successfully created your gameHub account."
+			content="You have successfully logged into your gameHub account"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create Account</title>
+		<meta
+			name="description"
+			content="Log into or create your GameHub account."
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--Style Sheets-->
 		<link href="/styles/styles.css" rel="stylesheet" />
+		<link href="/styles/account.css" rel="stylesheet" />
 
 		<!--Fonts-->
 		<link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css" />
@@ -18,7 +25,22 @@
 			src="https://kit.fontawesome.com/a8fae1eb2c.js"
 			crossorigin="anonymous"
 		></script>
-
+		<!-- Hotjar Tracking Code for http://deanna-berg-csm.netlify.app/ -->
+		<script>
+			(function (h, o, t, j, a, r) {
+				h.hj =
+					h.hj ||
+					function () {
+						(h.hj.q = h.hj.q || []).push(arguments);
+					};
+				h._hjSettings = { hjid: 2279553, hjsv: 6 };
+				a = o.getElementsByTagName("head")[0];
+				r = o.createElement("script");
+				r.async = 1;
+				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+		</script>
 	</head>
 	<body>
 		<header>
@@ -32,9 +54,7 @@
 			<nav>
 				<ul>
 					<li>
-						<a class="" href="../index.html"
-							><i class="fas fa-globe-americas"></i>Home</a
-						>
+						<a class="" href="../index.html"><i class="fas fa-home"></i>Home</a>
 					</li>
 					<li>
 						<a class="" href="/game/index.html"
@@ -43,7 +63,7 @@
 					</li>
 					<li>
 						<a class="" href="index.html"
-							><i class="fas fa-user"></i>log in/Join</a
+							><i class="fas fa-user"></i>log in/join</a
 						>
 					</li>
 					<li>
@@ -70,19 +90,18 @@
 			<!--Cart Button-->
 			<div class="cart">
 				<div id="cartNumber">1</div>
-				<a class="greenWhite" href="/checkout/cart.html"
+				<a class="greenWhite" href="../cart.html"
 					><i class="fas fa-shopping-cart fa-2x"></i
 				></a>
 			</div>
 		</header>
-
 		<main>
 			<div class="confirm">
-				<h1>Your account has been created!</h1>
-				<a class="button greenWhite-button" href="account-profile.html"
+				<h1>Your are logged-in!</h1>
+				<a class="button purpleGreen-button" href="account-profile.html"
 					>visit account</a
 				>
-				<a class="" href="../index.html">back to homepage</a>
+				<p><a class="homepage" href="../index.html">back to homepage</a></p>
 			</div>
 		</main>
 		<footer></footer>
