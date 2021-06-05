@@ -1,141 +1,101 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Contact</title>
-		<meta
-			name="description"
-			content="The earth's largest marketplace for gamers to buy, sell, and pre-order video games."
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
 
-		<!--Style Sheets-->
-		<link href="/styles/styles.css" rel="stylesheet" />
-		<link href="/styles/contact.css" rel="stylesheet" />
+<head>
+	<title>Contact</title>
+	<meta name="description"
+		content="The earth's largest marketplace for gamers to buy, sell, and pre-order video games." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!--Fonts-->
-		<link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css" />
+	<!--Style Sheets-->
+	<link href="/styles/styles.css" rel="stylesheet" />
+	<link href="/styles/contact.css" rel="stylesheet" />
 
-		<!--Font Awesome Script-->
-		<script
-			src="https://kit.fontawesome.com/a8fae1eb2c.js"
-			crossorigin="anonymous"
-		></script>
-		<!-- Hotjar Tracking Code for http://deanna-berg-csm.netlify.app/ -->
-		<script>
-			(function (h, o, t, j, a, r) {
-				h.hj =
-					h.hj ||
-					function () {
-						(h.hj.q = h.hj.q || []).push(arguments);
-					};
-				h._hjSettings = { hjid: 2279553, hjsv: 6 };
-				a = o.getElementsByTagName("head")[0];
-				r = o.createElement("script");
-				r.async = 1;
-				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-				a.appendChild(r);
-			})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-		</script>
-	</head>
-	<body>
-		<header>
-			<!--Hamburger Menu-->
-			<label class="hamburger-label" for="hamburger-menu"
-				><i class="fas fa-bars"></i
-			></label>
-			<input type="checkbox" id="hamburger-menu" />
+	<!--Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css" />
 
-			<!--Navigation-->
-			<nav>
-				<ul>
-					<li>
-						<a class="" href="../index.html"
-							><i class="fas fa-globe-americas"></i>Home</a
-						>
-					</li>
-					<li>
-						<a class="" href="/game/index.html"
-							><i class="fas fa-gamepad"></i>Shop</a
-						>
-					</li>
-					<li>
-						<a class="" href="/account/index.html"
-							><i class="fas fa-user"></i>log in/Join</a
-						>
-					</li>
-					<li>
-						<a class="active" href="index.html"
-							><i class="fas fa-envelope"></i>Contact</a
-						>
-					</li>
-				</ul>
-			</nav>
+	<!--Font Awesome Script-->
+	<script src="https://kit.fontawesome.com/a8fae1eb2c.js" crossorigin="anonymous"></script>
 
-			<!--Logo-->
+</head>
 
-			<a id="logo-container" href="../index.html"
-				><img id="logo" src="/svg/gamehub-logo.svg" alt="Game Hub Logo"
-			/></a>
+<body>
+	<header>
+		<!--Hamburger Menu-->
+		<label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
+		<input type="checkbox" id="hamburger-menu" />
 
-			<!--Search Bar-->
-			<form id="search">
-				<input type="search" name="search" placeholder="search the universe" />
-				<button onclick="location.href='/game/search.html';" type="button">
-					<i class="fas fa-search"></i>
-				</button>
-			</form>
+		<!--Navigation-->
+		<nav>
+			<ul>
+				<li>
+					<a class="" href="index.html"><i class="fas fa-globe-americas"></i>Home</a>
+				</li>
+				<li>
+					<a class="" href="game/index.html"><i class="fas fa-gamepad"></i>Shop</a>
+				</li>
+				<li>
+					<a class="" href="account/index.html"><i class="fas fa-user"></i>log in/Join</a>
+				</li>
+				<li>
+					<a class="" href="contact/index.html"><i class="fas fa-envelope"></i>Contact</a>
+				</li>
+			</ul>
+		</nav>
 
-			<!--Cart Button-->
-			<div class="cart">
-				<a class="greenWhite" href="cart.html"
-					><i class="fas fa-shopping-cart fa-2x"></i
-				></a>
-			</div>
-		</header>
-		<main>
+		<!--Logo-->
+
+		<a id="logo-container" href="/index.html">
+			<img id="logo" src="/svg/GameHubLogo_small.svg" alt="Game Hub Logo" />
+		</a>
+
+		<!--Search Bar-->
+		<form id="search">
+			<input type="search" name="search" placeholder="search the universe" />
+			<button onclick="location.href='game/search.html'" type="button">
+				<i class="fas fa-search"></i>
+			</button>
+		</form>
+
+		<!--Cart Button-->
+		<div id="cartWrap">
+			<a id="cart" class="cartActive" href="/checkout/cart.html"><i id="cartIcon"
+					class="fas fa-shopping-cart fa-2x"></i></a>
+			<div id="cartItem"><span class="carItemNumber">3</span></div>
+		</div>
+	</header>
+	<main>
+		<div class="mainContentWrap">
 			<div class="form-card">
-				<h1 class="heading-line">contact</h1>
-
-				<form id="contactForm">
-					<label
-						>Your Name
-						<div class="form-error" id="nameError">Please enter your name</div>
+				<form>
+					<h1>contact us</h1>
+					<label>Your Name
+						<span class="form-error" id="nameError">Please enter your name</span>
 						<br />
 						<input type="text" name="name" id="name" placeholder="your name" />
 					</label>
-					<label
-						>email
+					<label>email
 						<span class="form-error" id="emailError">
-							Please enter a valid email</span
-						><br />
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="your email"
-						/>
+							Please enter a valid email</span><br />
+						<input type="email" name="email" id="email" placeholder="your email" />
 					</label>
-					<label
-						>message
+					<label>message
 						<span class="form-error" id="messageError">
-							Please include a message</span
-						><br />
-						<textarea
-							name="message"
-							id="message"
-							placeholder="Type your message here..."
-						></textarea>
+							Please include a message</span><br />
+						<textarea name="message" id="message" placeholder="Type your message here..."></textarea>
 					</label>
-					<button class="contactButton greenbutton">send</button>
+					<button class="formButton">send</button>
 				</form>
 			</div>
-			<div class="contact-info">
+			<div class="form-info">
 				<h2>Don't want to use the form?</h2>
-				<p><i class="fas fa-at"></i>help@gamehub.com</p>
-				<p><i class="fas fa-phone"></i>000-000-0000</p>
+				<span><i class="fas fa-at"></i>help@gamehub.com</span>
+				<span><i class="fas fa-phone"></i>000-000-0000</span>
 			</div>
-		</main>
-		<footer></footer>
-		<script src="/js/contact.js"></script>
-	</body>
+		</div>
+	</main>
+	<footer></footer>
+	<script src="/js/contact.js"></script>
+</body>
+
 </html>

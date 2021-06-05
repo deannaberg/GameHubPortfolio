@@ -1,30 +1,4 @@
-.contact-info h2 {
-    font-family: var(--proxima);
-    font-size: 1.5em;
-    font-weight: 400;
-    color: var(--purple2);
-}
 
-.contact-info p  {
-    font-size: 1.2em;
-    font-weight: 400;
-    color: var(--purple2);
-   
-}
-
-.contact-info a {
-    color: var(--blackberry);
-}
-.contact-info .fas {
-    margin-right: 10px;
-    color: var(--purple2)
-}
-.form-error{
-    margin-top: 0;
-    text-transform:lowercase;
-    color: #fff;
-    display: none;
-}
 
 .contactButton {
     border:none;

@@ -19,9 +19,6 @@
 
 <body>
 	<header>
-		<!--Hamburger Menu-->
-		<label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
-		<input type="checkbox" id="hamburger-menu" />
 
 		<!--Navigation-->
 		<nav>
@@ -43,10 +40,16 @@
 
 		<!--Logo-->
 
-		<a id="logo-container" href="index.html">
-			<img id="logo" src="svg/gamehub-logo-mobile.svg" alt="Game Hub Logo" />
+		<a class="logo-container smallLogo" href="index.html">
+			<img class="logo" src="svg/GameHubLogo_small.svg" alt="Game Hub Logo" />
 		</a>
-
+		<a class="logo-container largeLogo" href="index.html">
+			<img class="logo" src="svg/GameHubLogo.svg" alt="Game Hub Logo" />
+		</a>
+		<!--Search Button-->
+		<div id="searchButton">
+			<button><i class="fas fa-search"></i></button>
+		</div>
 		<!--Search Bar-->
 		<form id="search">
 			<input type="search" name="search" placeholder="search the universe" />
@@ -57,9 +60,8 @@
 
 		<!--Cart Button-->
 		<div id="cartWrap">
-			<a id="cart" class="cartActive" href="checkout/cart.html"><i id="cartIcon"
-					class="fas fa-shopping-cart fa-2x"></i></a>
-			<div id="cartItem">23</div>
+			<button id="cart"><i id="cartIcon" class="fas fa-shopping-cart"></i></button>
+			<div id="cartItem"><span class="carItemNumber">3</span></div>
 		</div>
 	</header>
 
@@ -71,7 +73,6 @@
 			<a href="#">learn more</a>
 		</section>
 		<section class="section2">
-
 			<div id="featuredGames"></div>
 		</section>
 		<section class="section3">
@@ -107,7 +108,6 @@
 		</section>
 	</main>
 	<footer>
-		footer content here
 	</footer>
 	<script src="js/featured.js"></script>
 </body>

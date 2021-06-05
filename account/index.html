@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 <html>
-   <head>
-        <title>Account Log-In</title>
-        <meta name="description" content="Use this form to log into your gameHub account."> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!--Style Sheets-->
-        <link href="/styles/styles.css" rel="stylesheet">
-        <link href="/styles/account.css" rel="stylesheet">
-        
-        <!--Fonts-->
-        <link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css">
-        
-        <!--Font Awesome Script-->
-        <script src="https://kit.fontawesome.com/a8fae1eb2c.js" crossorigin="anonymous"></script>
 
-    </head>
-    <body>
-        <header>
-            <!--Hamburger Menu-->
-            <label class="hamburger-label"for="hamburger-menu"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" id="hamburger-menu" /> 
-            
-            <!--Navigation-->
-            <nav>
-                <ul>
-                    <li><a href="../index.html"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="/game/index.html"><i class="fas fa-gamepad"></i>Shop</a></li>
-                    
-                    <li><a class="active" href="index.html"><i class="fas fa-user"></i>log in/Join</a></li>
-                    <li><a href="../contact/index.html"><i class="fas fa-envelope"></i>Contact</a></li>
-                </ul>
-            </nav> 
-                
-            <!--Logo-->
-                <a href="../index.html"><img id="logo" src="/svg/gamehub-logo.svg" alt="Game Hub Logo"/></a>
-                
-            <!--Search Bar-->
-                <form id="search">
-                    <input type="search" name="search" placeholder="search the universe"/>
-                    <button onclick="location.href='/game/search.html';" type="button"><i class="fas fa-search"></i></button>
-                </form>
-    
-            <!--Cart Button-->
-                <div class="cart">
-                    <a class="greenWhite" href ="/checkout/cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-                </div>
-        </header>
-        <main>
+<head>
+    <title>Account Log-In</title>
+    <meta name="description" content="Use this form to log into your gameHub account.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Style Sheets-->
+    <link href="/styles/styles.css" rel="stylesheet">
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css">
+
+    <!--Font Awesome Script-->
+    <script src="https://kit.fontawesome.com/a8fae1eb2c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <!--Hamburger Menu-->
+        <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+
+        <!--Navigation-->
+        <nav>
+            <ul>
+                <li>
+                    <a class="" href="/index.html"><i class="fas fa-globe-americas"></i>Home</a>
+                </li>
+                <li>
+                    <a class="" href="/game/index.html"><i class="fas fa-gamepad"></i>Shop</a>
+                </li>
+                <li>
+                    <a class="" href="index.html"><i class="fas fa-user"></i>log in/Join</a>
+                </li>
+                <li>
+                    <a class="" href="/contact/index.html"><i class="fas fa-envelope"></i>Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Logo-->
+
+        <a id="logo-container" href="/index.html">
+            <img id="logo" src="/svg/GameHubLogo_small.svg" alt="Game Hub Logo" />
+        </a>
+
+        <!--Search Bar-->
+        <form id="search">
+            <input type="search" name="search" placeholder="search the universe" />
+            <button onclick="location.href='game/search.html'" type="button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <!--Cart Button-->
+        <div id="cartWrap">
+            <a id="cart" class="cartActive" href="/checkout/cart.html"><i id="cartIcon"
+                    class="fas fa-shopping-cart fa-2x"></i></a>
+            <div id="cartItem"><span class="carItemNumber">3</span></div>
+        </div>
+    </header>
+    <main>
+        <div class="mainContentWrap">
             <!--Log In Form-->
-            <div class="form-card" >
-                <h1>log in</h1>
+            <div class="form-card">
                 <form action="" method="get">
+                    <h1>log in</h1>
                     <label>username or email</br>
-                    <input type="text" name="email" /></label></br>
+                        <input type="text" name="email" /></label></br>
                     <label>password</br>
-                    <input type="password" name="password" /></label></br>
-                    
+                        <input type="password" name="password" /></label></br>
+                    <input type="submit" onclick="loggedIn()" value="Log In" id="logInButton"
+                        class="button formButton" />
                 </form>
-                <div class="form-card-links">
-                    <a class="button greenWhite-button" href="account-loggedin.html">Log In</a>
-                    <a class="whiteGreen" href="create-account.html">create an account</a>
-                </div>
             </div>
-            
-        </main>
-        <footer>
+            <div class="form-info">
+                <h2>Not a member?</h2>
+                <a href="create-account.html">create an account</a>
+            </div>
+        </div>
+    </main>
+    <footer>
 
-        </footer>
+    </footer>
 
-    </body>
+    <script src="/js/account-logins.js"></script>
+</body>
+
 </html>

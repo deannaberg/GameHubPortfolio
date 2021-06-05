@@ -27,52 +27,48 @@ async function getDetails() {
 	try {
 		const response = await fetch(product);
 		const json = await response.json();
-		
+
 		console.log(json);
 
-		const releaseDate = function(){
-			if (!json.attributes.length){
-			return "Release Date: unknown";
-		}else{ return `${json.attributes[0].name} ${json.attributes[0].options}`;}
-			
-	}
-	console.log(releaseDate());
-	
-		const seller = function(){
-			if (!json.attributes.length){
-			return "Seller: unknown";
-		}else{ return `${json.attributes[1].name} ${json.attributes[1].options}`;}		
-	}
-	console.log(seller());
+		const releaseDate = function () {
+			if (!json.attributes.length) {
+				return "Release Date: unknown";
+			} else { return `${json.attributes[0].name} ${json.attributes[0].options}`; }
 
-		const availability = function (){
-			if (json.stock_status === "instock" ) {
+		}
+		console.log(releaseDate());
+
+		const seller = function () {
+			if (!json.attributes.length) {
+				return "Seller: unknown";
+			} else { return `${json.attributes[1].name}: ${json.attributes[1].options}`; }
+		}
+		console.log(seller());
+
+		const availability = function () {
+			if (json.stock_status === "instock") {
 				return "In stock"
-			}else {return "out of stock"
-		}}
+			} else {
+				return "out of stock"
+			}
+		}
 		console.log(availability());
 
 		imageContainer.innerHTML = ` 
 									<img class="product-image-large" src="${json.images[0].src}" alt="${json.images[0].alt}"/>
 									`
-		titleContainer.innerHTML= `<h1>${json.name}</h1>
+		titleContainer.innerHTML = `<h1>${json.name}</h1>
+									<p class="availability">${availability()}</p>
 									<p>${releaseDate()}</p>
 									<p>${seller()}</p>
-									`
-
-		priceContainer.innerHTML = `<p class="itemPrice">${json.price}kr</p>
-								
-									<p class = "availability">${availability()}</p>
-									<div class="plus-minus">
-										<i class="fas fa-minus"></i><span>1</span>
-										<i class="fas fa-plus"></i>
-									</div>
-									<a class="button price-box-button" href="#">add to cart</a>
-									`
-
+									<div id="itemPrice">
+										<p>Price: ${json.price}kr</p>
+										<button class="addToCart">add to cart</button>
+										<button class="addFavorite"><i class="fas fa-heart"></i></button>
+									</div>`;
 		detailsContainer.innerHTML = `	
 										<p>${json.short_description}</p>`
-		console.log(detailsContainer.innerHTML);							
+
 	} catch (error) {
 		console.log("cannot display content");
 		//resultDisplay.innerHTML = "Cannot display content";

@@ -1,166 +1,92 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Product</title>
-		<meta
-			name="description"
-			content="gameHub product listing"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!--Style Sheets-->
-		<link href="/styles/styles.css" rel="stylesheet" />
-		<link href="/styles/product.css" rel="stylesheet" />
+<head>
+	<title>Product</title>
+	<meta name="description" content="gameHub product listing" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!--Fonts-->
-		<link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css" />
+	<!--Style Sheets-->
+	<link href="/styles/styles.css" rel="stylesheet" />
+	<link href="/styles/product.css" rel="stylesheet" />
 
-		<!--Font Awesome Script-->
-		<script
-			src="https://kit.fontawesome.com/a8fae1eb2c.js"
-			crossorigin="anonymous"
-		></script>
-		<!-- Hotjar Tracking Code for http://deanna-berg-csm.netlify.app/ -->
-		<script>
-			(function (h, o, t, j, a, r) {
-				h.hj =
-					h.hj ||
-					function () {
-						(h.hj.q = h.hj.q || []).push(arguments);
-					};
-				h._hjSettings = { hjid: 2279553, hjsv: 6 };
-				a = o.getElementsByTagName("head")[0];
-				r = o.createElement("script");
-				r.async = 1;
-				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-				a.appendChild(r);
-			})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-		</script>
-	</head>
-	<body>
-		<header>
-			<!--Hamburger Menu-->
-			<label class="hamburger-label" for="hamburger-menu"
-				><i class="fas fa-bars"></i
-			></label>
-			<input type="checkbox" id="hamburger-menu" />
+	<!--Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css" />
 
-			<!--Navigation-->
-			<nav>
-				<ul>
-					<li>
-						<a class="" href="../index.html"
-							><i class="fas fa-globe-americas"></i>Home</a
-						>
-					</li>
-					<li>
-						<a class="" href="index.html"
-							><i class="fas fa-gamepad"></i>Shop</a
-						>
-					</li>
-					<li>
-						<a class="" href="/account/index.html"
-							><i class="fas fa-user"></i>log in/Join</a
-						>
-					</li>
-					<li>
-						<a class="" href="/contact/index.html"
-							><i class="fas fa-envelope"></i>Contact</a
-						>
-					</li>
-				</ul>
-			</nav>
+	<!--Font Awesome Script-->
+	<script src="https://kit.fontawesome.com/a8fae1eb2c.js" crossorigin="anonymous"></script>
+</head>
 
-			<!--Logo-->
-			<a id="logo-container" href="../index.html"
-				><img id="logo" src="/svg/gamehub-logo.svg" alt="Game Hub Logo"
-			/></a>
+<body>
+	<header>
+		<!--Hamburger Menu-->
+		<label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
+		<input type="checkbox" id="hamburger-menu" />
 
-			<!--Search Bar-->
-			<form id="search">
-				<input type="search" name="search" placeholder="search the universe" />
-				<button onclick="location.href='search.html';" type="button">
-					<i class="fas fa-search"></i>
-				</button>
-			</form>
+		<!--Navigation-->
+		<nav>
+			<ul>
+				<li>
+					<a class="" href="//index.html"><i class="fas fa-globe-americas"></i>Home</a>
+				</li>
+				<li>
+					<a class="" href="/game/index.html"><i class="fas fa-gamepad"></i>Shop</a>
+				</li>
+				<li>
+					<a class="" href="index.html"><i class="fas fa-user"></i>log in/Join</a>
+				</li>
+				<li>
+					<a class="" href="/contact/index.html"><i class="fas fa-envelope"></i>Contact</a>
+				</li>
+			</ul>
+		</nav>
 
-			<!--Cart Button-->
-			<div class="cart">
-				<div id="cartNumber">1</div>
-				<a class="greenWhite" href="/checkout/cart.html" type="button"
-					><i class="fas fa-shopping-cart fa-2x"></i
-				></a>
+		<!--Logo-->
+
+		<a id="logo-container" href="//index.html">
+			<img id="logo" src="/svg/GameHubLogo_small.svg" alt="Game Hub Logo" />
+		</a>
+
+		<!--Search Bar-->
+		<form id="search">
+			<input type="search" name="search" placeholder="search the universe" />
+			<button onclick="location.href='game/search.html'" type="button">
+				<i class="fas fa-search"></i>
+			</button>
+		</form>
+
+		<!--Cart Button-->
+		<div id="cartWrap">
+			<a id="cart" class="cartActive" href="/checkout/cart.html"><i id="cartIcon"
+					class="fas fa-shopping-cart fa-2x"></i></a>
+			<div id="cartItem"><span class="carItemNumber">3</span></div>
+		</div>
+	</header>
+	<main>
+		<div id="product">
+			<div id="productImage" class="image-box"></div>
+			<div id="productTitle" class="title">
 			</div>
-		</header>
-		<main>
-			<div id="product">
-				<div id="productImage" class="image-box">
-					<img class="product-image-large" src="/svg/background_confirm.svg" alt="Placeholder image for video game product"/>
+			<!--Accout Tabs-->
+			<section class="tabs">
+				<nav class="tabNav">
+					<button class="tab activeTab" onclick="openPanel(event, 'panel1')">product details</button></li>
+					<button class="tab" onclick="openPanel(event, 'panel2')">seller details</button></li>
+
+				</nav>
+				<div id="panel1" class="panelContent activePanel">
+					<p>product details here</p>
 				</div>
-				<div id="productTitle" class="title">
+				<div id="panel2" class="panelContent">
+					<p>seller details here</p>
 				</div>
-				<div id="price-box">
-					
-				</div>
-				<div class="tabs">
-					<div class="tab">
-						<input type="radio" id="tab-1" name="tab-group-1" checked />
-						<label for="tab-1">product details</label>
-						<div id="productDetails" class="content">
-							<p>Product detail content</p>
-						</div>
-					</div>
-					<div class="tab">
-						<input type="radio" id="tab-2" name="tab-group-1" />
-						<label for="tab-2">seller details</label>
-						<div id="sellerDetails" class="content">
-							<p>Seller detail content</p>
-						</div>
-					</div>
-				</div> 
-			</div>
-		</main>
-		<footer></footer>
-		<script src="/js/product-details.js"></script>
-	</body>
+
+			</section>
+		</div>
+	</main>
+	<footer></footer>
+	<script src="/js/components.js"></script>
+	<script src="/js/product-details.js"></script>
+</body>
+
 </html>
-
-<!--			<div class="image-box">
-					<img
-					class="product-image-large"
-						src="/svg/background_confirm.svg" alt="Placeholder image for video game product"/>
-				</div>
-				<div class="title">
-					<h1>Game Title</h1>
-					<p>
-						Seller Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i
-						><i class="fas fa-star"></i>
-					</p>
-					<p>Condition: New</p>
-					<p>Item Location: California, USA</p>
-				</div>
-				<div class="price-box">
-					<p class="itemPrice">$35.00</p>
-					<p class="availability">1 available</p>
-					<div class="plus-minus">
-						<i class="fas fa-minus"></i><span>1</span>
-						<i class="fas fa-plus"></i>
-					</div>
-					<a class="button price-box-button" href="#">add to cart</a>
-				</div>
-				<div class="tabs">
-					<div class="tab">
-						<input type="radio" id="tab-1" name="tab-group-1" checked />
-						<label for="tab-1">product details</label>
-						<div class="content">
-							<p>Product detail content</p>
-						</div>
-					</div>
-					<div class="tab">
-						<input type="radio" id="tab-2" name="tab-group-1" />
-						<label for="tab-2">seller details</label>
-						<div class="content">
-							<p>Seller detail content</p>
-						</div>
-					</div>
-				</div> 
