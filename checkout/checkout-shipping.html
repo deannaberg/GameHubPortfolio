@@ -1,109 +1,129 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Checkout - Contact and Shipping</title>
-        <meta name="description" content="Input your contact and shipping information"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Style Sheets-->
-        <link href="/styles/styles.css" rel="stylesheet">
-        <link href="/styles/checkout.css" rel="stylesheet">
-        
-        <!--Fonts-->
-        <link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css">
-            
-        <!--Font Awesome Script-->
-        <script src="https://kit.fontawesome.com/a8fae1eb2c.js" crossorigin="anonymous"></script>
-    <!-- Hotjar Tracking Code for http://deanna-berg-csm.netlify.app/ -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2279553,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-    </head>
-    <body>
-        <header>
-            <!--Hamburger Menu-->
-            <label class="hamburger-label"for="hamburger-menu"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" id="hamburger-menu" /> 
-            
-            <!--Navigation-->
-            <nav>
-                <ul>
-                    <li><a class=""" href="../index.html"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a class="" href="/game/index.html"><i class="fas fa-gamepad"></i>Shop</a></li>
-                    
-                    <li><a class="" href="/account/index.html"><i class="fas fa-user"></i>log in/Join</a></li>
-                    <li><a class="" href="/contact/index.html"><i class="fas fa-envelope"></i>Contact</a></li>
-                </ul>
-            </nav> 
-                
-            <!--Logo-->
-                <a href="../index.html"><img id="logo" src="/svg/gamehub-logo.svg" alt="Game Hub Logo"/></a>
-                
-            <!--Search Bar-->
-                <form id="search">
-                    <input type="search" name="search" placeholder="search the universe"/>
-                    <button onclick="location.href='/game/search.html';" type="button"><i class="fas fa-search"></i></button>
-                </form>
-    
-            <!--Cart Button-->
-                <div class="cart">
-                    <a class="greenWhite"href ="cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-                </div>
-            </header>
-            <main>
-            <div id="checkoutSteps">
-                <h1>Contact & Shipping</h1>
-                </div>
-            <!--Contact Information Form-->
-                <div id="checkout">
-                <div id="c-wrap1">
-                    <form action="" method="get">
-                        <fieldset>
-                            <legend><h2>Contact Information</h2></legend>
-                        <label>first name</br>
-                        <input type="text" name="first name" /></label><br/>
-                    <label>last name</br>
-                        <input type="text" name="last name" /></label><br/>
-                    <label>email</br>
-                        <input type="email" name="email" /></label><br/>
-                    <label>phone</br>
-                        <input type="text" name="phone" /></label><br/>
-                </fieldset>
-                
-                <!--Shipping Address Form-->
-                <fieldset>
-                    <legend><h2>shipping address</h2></legend>
-                    <label>first name</br>
-                        <input type="text" name="first name" /></label><br/>
-                    <label>last name</br>
-                        <input type="text" name="last name" /></label><br/>
-                    <label>country <select class="drop-margin" name="country">
-                            <option value="Country 1">Country 1</option>
-                            <option value="Country 2">Country 2</option>
-                            <option value="Country 3">Country 3</option>
-                        </select></label><br/>
-                    <label>street address</br>
-                        <input type="text" name="street address" /></label><br/>
-                    <label>address 2</br>
-                        <input type="text" name="address 2" /></label><br/>
-                    <label>city</br>
-                        <input type="text" name="city" /></label><br/>
-                    <label>zip code</br>
-                        <input type="text" name="zip code" /></label><br/>
-                </fieldset>
+
+<head>
+    <title>Checkout - Contact and Shipping</title>
+    <meta name="description" content="Input your contact and shipping information">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Style Sheets-->
+    <link href="/styles/styles.css" rel="stylesheet">
+    <link href="/styles/checkout.css" rel="stylesheet">
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/vlt4nwj.css">
+
+    <!--Font Awesome Script-->
+    <script src="https://kit.fontawesome.com/a8fae1eb2c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <!--Navigation-->
+        <nav>
+            <ul>
+                <li>
+                    <a class="" href="/index.html"><i class="fas fa-globe-americas"></i>Home</a>
+                </li>
+                <li>
+                    <a class="" href="/game/index.html"><i class="fas fa-gamepad"></i>Shop</a>
+                </li>
+                <li>
+                    <a class="" href="/account/index.html"><i class="fas fa-user"></i>log in/Join</a>
+                </li>
+                <li>
+                    <a class="" href="index.html"><i class="fas fa-envelope"></i>Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Logo-->
+
+        <a class="logo-container smallLogo" href="/index.html">
+            <img class="logo" src="/svg/GameHubLogo_small.svg" alt="Game Hub Logo" />
+        </a>
+        <!--Search Button-->
+        <div class="searchButton">
+            <button id="searchButton" type="button" aria-label="openSearch"><i class="fas fa-search"></i></button>
+        </div>
+        <!--Search Bar-->
+        <div class="dropSearchWrap">
+            <button class="closeSearch" type="button" aria-label="close search"><i
+                    class="fas fa-times-circle"></i></button>
+            <form class="dropSearch">
+                <input type="search" name="search" placeholder="search the universe" />
+                <button onclick="location.href='/game/search.html'" type="button" aria-label="search">
+                    <i class="fas fa-search"></i>
+                </button>
             </form>
+        </div>
+        <form class="search">
+            <input type="search" name="search" placeholder="search the universe" />
+            <button onclick="location.href='/game/search.html'" type="button" aria-label="search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <!--Cart Button-->
+        <div id="cartWrap">
+            <button id="cart" type="button" onclick="location.href='cart.html'" aria-label="shopping cart"><i
+                    id="cartIcon" class="fas fa-shopping-cart"></i></button>
+            <div id="cartItem"><span class="carItemNumber">3</span></div>
+        </div>
+    </header>
+    <main>
+        <div id="checkoutSteps">
+            <h1>Contact & Shipping</h1>
+        </div>
+        <!--Contact Information Form-->
+        <div id="checkout">
+            <div id="c-wrap1">
+                <form action="" method="get">
+                    <fieldset>
+                        <legend>
+                            <h2>Contact Information</h2>
+                        </legend>
+                        <label>first name</br>
+                            <input type="text" name="first name" /></label><br />
+                        <label>last name</br>
+                            <input type="text" name="last name" /></label><br />
+                        <label>email</br>
+                            <input type="email" name="email" /></label><br />
+                        <label>phone</br>
+                            <input type="text" name="phone" /></label><br />
+                    </fieldset>
+
+                    <!--Shipping Address Form-->
+                    <fieldset>
+                        <legend>
+                            <h2>shipping address</h2>
+                        </legend>
+                        <label>first name</br>
+                            <input type="text" name="first name" /></label><br />
+                        <label>last name</br>
+                            <input type="text" name="last name" /></label><br />
+                        <label>country <select class="drop-margin" name="country">
+                                <option value="Country 1">Country 1</option>
+                                <option value="Country 2">Country 2</option>
+                                <option value="Country 3">Country 3</option>
+                            </select></label><br />
+                        <label>street address</br>
+                            <input type="text" name="street address" /></label><br />
+                        <label>address 2</br>
+                            <input type="text" name="address 2" /></label><br />
+                        <label>city</br>
+                            <input type="text" name="city" /></label><br />
+                        <label>zip code</br>
+                            <input type="text" name="zip code" /></label><br />
+                    </fieldset>
+                </form>
             </div>
-           
+
             <!--Order Summary Card-->
-            <div id="c-wrap2">   
+            <div id="c-wrap2">
                 <div id="order-sum">
-                     <div id="order-sum-grid">
+                    <div id="order-sum-grid">
                         <span class="item-l">order value</span>
                         <span class="item-r">$35.00</span>
                         <span class="item-l">shipping</span>
@@ -113,17 +133,19 @@
                     </div>
                     <a class="button greenWhite-button" href="checkout-payment.html">continue</a>
                 </div>
-                    <!--Accepted Forms of Payment-->
+                <!--Accepted Forms of Payment-->
                 <div id="we-accept">
-                    <p>We accept: <i class="fab fa-cc-visa"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-apple-pay"></i></p>
-                </div>
+                    <p>We accept: <i class="fab fa-cc-visa"></i><i class="fab fa-cc-paypal"></i><i
+                            class="fab fa-cc-apple-pay"></i></p>
                 </div>
             </div>
-        
-        </main>
-        <footer>
+        </div>
 
-        </footer>
+    </main>
+    <footer>
 
-    </body>
+    </footer>
+    <script src="/js/components.js"></script>
+</body>
+
 </html>

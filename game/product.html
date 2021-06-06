@@ -19,21 +19,17 @@
 
 <body>
 	<header>
-		<!--Hamburger Menu-->
-		<label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
-		<input type="checkbox" id="hamburger-menu" />
-
 		<!--Navigation-->
 		<nav>
 			<ul>
 				<li>
-					<a class="" href="//index.html"><i class="fas fa-globe-americas"></i>Home</a>
+					<a class="" href="/index.html"><i class="fas fa-globe-americas"></i>Home</a>
 				</li>
 				<li>
-					<a class="" href="/game/index.html"><i class="fas fa-gamepad"></i>Shop</a>
+					<a class="" href="index.html"><i class="fas fa-gamepad"></i>Shop</a>
 				</li>
 				<li>
-					<a class="" href="index.html"><i class="fas fa-user"></i>log in/Join</a>
+					<a class="" href="/account/index.html"><i class="fas fa-user"></i>log in/Join</a>
 				</li>
 				<li>
 					<a class="" href="/contact/index.html"><i class="fas fa-envelope"></i>Contact</a>
@@ -42,23 +38,35 @@
 		</nav>
 
 		<!--Logo-->
-
-		<a id="logo-container" href="//index.html">
-			<img id="logo" src="/svg/GameHubLogo_small.svg" alt="Game Hub Logo" />
+		<a class="logo-container smallLogo" href="/index.html">
+			<img class="logo" src="/svg/GameHubLogo_small.svg" alt="Game Hub Logo" />
 		</a>
-
+		<!--Search Button-->
+		<div class="searchButton">
+			<button id="searchButton" type="button" aria-label="openSearch"><i class="fas fa-search"></i></button>
+		</div>
 		<!--Search Bar-->
-		<form id="search">
+		<div class="dropSearchWrap">
+			<button class="closeSearch" type="button" aria-label="close search"><i
+					class="fas fa-times-circle"></i></button>
+			<form class="dropSearch">
+				<input type="search" name="search" placeholder="search the universe" />
+				<button onclick="location.href='search.html'" type="button" aria-label="search">
+					<i class="fas fa-search"></i>
+				</button>
+			</form>
+		</div>
+		<form class="search">
 			<input type="search" name="search" placeholder="search the universe" />
-			<button onclick="location.href='game/search.html'" type="button">
+			<button onclick="location.href='search.html'" type="button" aria-label="search">
 				<i class="fas fa-search"></i>
 			</button>
 		</form>
 
 		<!--Cart Button-->
 		<div id="cartWrap">
-			<a id="cart" class="cartActive" href="/checkout/cart.html"><i id="cartIcon"
-					class="fas fa-shopping-cart fa-2x"></i></a>
+			<button id="cart" type="button" onclick="location.href='/checkout/cart.html'" aria-label="shopping cart"><i
+					id="cartIcon" class="fas fa-shopping-cart"></i></button>
 			<div id="cartItem"><span class="carItemNumber">3</span></div>
 		</div>
 	</header>
