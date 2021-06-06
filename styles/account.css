@@ -75,6 +75,11 @@ p{
     margin: 10px 0;
     border-radius: 10px;
 }
+.profileButton{
+    background: none;
+    background-color: var(--green);
+    color: var(--purple2);
+}
 /*Tab Section*/
 
 

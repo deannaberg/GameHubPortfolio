@@ -537,7 +537,7 @@ nav a:hover {
 .panelContentWrap{
     display: block;
     width: 100%;
-    min-height: 100px;
+    min-height: 200px;
     font-family: var(--roboto);
 	padding: 0 10px;
 }
