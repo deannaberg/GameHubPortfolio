@@ -1,3 +1,13 @@
+const searchButton = document.querySelector("#searchButton");
+const closeButton = document.querySelector(".closeSearch");
+const viewSearch = document.querySelector(".dropSearchWrap");
+
+searchButton.addEventListener("click", function () {
+    viewSearch.style.display = "flex";
+});
+closeButton.addEventListener("click", function () {
+    viewSearch.style.display = "none";
+});
 
 
 function openPanel(event, panelNumber) {
