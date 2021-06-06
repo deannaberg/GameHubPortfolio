@@ -420,11 +420,11 @@ nav a:hover {
 }
 #cartWrap {
 	grid-area: cart;
-	right: 20px;
+	right: 5px;
 }
 .searchButton{
 	grid-area: search;
-	left: 20px;
+	left: 5px;
 }
 #cartWrap button, .searchButton button{
 	font-size: 2rem;
