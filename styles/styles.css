@@ -878,14 +878,12 @@ textarea {
 			height: 300px;
 			margin: 0;
 		}
-		#section4button {
-			grid-area: button;
-			height: 50px;
-			line-height: 50px;
-			justify-self: start;
-			margin: 0;
+		.section4button {
 			text-align: center;
-			width: 40%;
+			width: 100px;
+			margin: 30px 0;
+			display: inline-block;
+			float: left;
 		}
 		.smallbox {
 			margin: auto 10px;
