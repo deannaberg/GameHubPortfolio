@@ -510,8 +510,7 @@ nav a:hover {
 
 .dropSearch button, .search button {
 	color: #fff;
-	background-color: var(--purple2);
-	border: 1px solid var(--purple2);
+	
 	padding: 5px 5px;
 	display: inline-block;
 	margin: 0px;
@@ -522,9 +521,13 @@ nav a:hover {
 	;
 }
 
-.dropSearch button:hover, .search button:hover {
-	color: #fff;
+.search button{
 	background-color: var(--purple1);
+	border: 1px solid var(--purple1);
+}
+.dropSearch button{
+	background-color: var(--purple2);
+	border: 1px solid var(--purple2);
 }
 
 /*TABBED MENU*/
