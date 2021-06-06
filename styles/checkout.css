@@ -95,7 +95,7 @@ textarea {
 	border-radius: 12px;
 	background-image: linear-gradient(to bottom right, var(--purple2), var(--blackberry));
 	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.5);
-	width: 70%;
+	width: 300px;
 	height: auto;
 	margin: 0 auto 10px auto;
 	font-family: var(--proxima);
